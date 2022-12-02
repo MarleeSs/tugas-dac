@@ -19,3 +19,12 @@ alter table scores
 SELECT user.name, score.score_total, score.time_start, score.time_end
 FROM scores score
          INNER JOIN users user ON user.id = score.user_id WHERE user_id = ?;
+
+CREATE TABLE pweb(
+                      nim  VARCHAR(55) PRIMARY KEY,
+                      name VARCHAR(55),
+                      presensi INTEGER,
+                      tugas INTEGER,
+                      uts INTEGER,
+                      uas INTEGER
+)Engine = InnoDB;
